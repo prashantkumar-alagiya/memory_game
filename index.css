@@ -1,0 +1,46 @@
+#root {
+    width: max-content;
+    height: max-content;
+    display: flex;
+    border: 2px solid black;
+}
+
+#root > div  {
+    width: 200px;
+    height: 200px;
+    border: 1px solid greenyellow;
+    background-color: lavender;
+}
+
+#scoreTracker {
+    display: flex;
+    gap: 70px ;
+}
+
+.blink {
+    animation-name: blinkAnimation;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes blinkAnimation {
+    20% {
+        background-color: indianred;
+    }
+
+    100% {
+        background-color: lavender;
+    }
+}
+
+.shake {
+    animation: shake 0.8s infinite;
+    transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake {
+    0% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-8px);}
+    20%, 40%, 60%, 80%,100% {transform: translateX(8px);}
+ }
